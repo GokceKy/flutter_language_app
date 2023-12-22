@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_app_language/core/constants/app/app_constants.dart';
 import 'package:flutter_app_language/core/init/lang/language_manager.dart';
 
 void main() async {
@@ -8,8 +9,7 @@ void main() async {
   runApp(
     EasyLocalization(
         supportedLocales: LanguageManager.instance.supportedLocales,
-        path:
-            'assets/translations', // <-- change the path of the translation files
+        path: ApplicationConstans.LANG_ASSET_PATH,
         fallbackLocale: const Locale('en', 'US'), //default
         child: const MyApp()),
   );
